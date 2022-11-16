@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react'
 import Layout from '@components/Layout/Layout'
 import KawaiiHeader from '@components/KawaiiHeader/KawaiiHeader'
 import ProductList from '@components/ProductList/ProductList'
 import { server } from '../config';
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 
   const response = await fetch(`${server}/api/avo`)
-  const { data: productList } = await response.json()
+  const { data: productList }: TAPIAvoResponse = await response.json()
 
   return {
     props: {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
 
